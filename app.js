@@ -4,16 +4,22 @@ let qbtn = document.getElementById('btn');
 qbtn.addEventListener('click', majorF);
 let loader = document.getElementById('loader');
 
+
 function majorF(){
+    qbtn.disabled = true;
     loaderf();
-    setTimeout(getQuote, 1000);
-    setTimeout(loaderf1, 2000);
+    setTimeout(getQuote, 2000) ;
+}
+function btndis(){
+    qbtn.disabled = false;
+    
 }
 
 
 function loaderf(){
     loader.style.display = "flex";
     document.getElementById('quote').style.display = "none";
+    
 }
 function loaderf1(){
     loader.style.display = "none";
@@ -26,6 +32,8 @@ function getQuote(){
         let quotetxt = json.todo;
         quote.innerHTML = `"${quotetxt}"`;
         author.innerHTML = "Today's Task";
-    });
+    })
+    .then(loaderf1)
+    .then(btndis);
 }
 

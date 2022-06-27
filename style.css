@@ -3,7 +3,9 @@
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-
+body{
+    background-color: rgb(207, 207, 207);
+}
 .backimg{
     background-image: url(./img/pexels-vitaly-vlasov-4033803.jpg);
     background-size: cover;
@@ -53,22 +55,22 @@ span{
     font-weight: bolder;
 }
 #btn{
-font-size: 2em;
+font-size: 1em;
 padding: 1em;
-background-color: transparent;
+background-color: rgb(201, 201, 201, 0.3);
 border: 2px solid rgb(255, 255, 255);
 border-radius: 15px;
 color: rgb(255, 255, 255);
 font-weight: bolder;
 transition: 0.6s ease; 
-position: fixed;
-top: 300px;
-width: 350px;
+position: absolute;
+top: 250px;
+width: 300px;
 
 }
 #btn:hover{
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255, 0.5);
     color: black;
     border: 1px solid black;
     
@@ -112,109 +114,35 @@ width: 350px;
     from {-webkit-transform: rotate(0deg);}
     to {-webkit-transform: rotate(360deg);}
  }
-/* 
-@media screen and (max-width: 425px){
-    p{
-        font-size: 1em;
-    }
-    span{
-        font-size: 1em;
-    }
+
+ @media only screen and (max-width: 768px) {
     #btn{
-        font-size: 1em;
-        }
-    .loader{
-        position:absolute;
-        left: 184px;
-        top: 150px;
-        width: 100px;
-        display: none;
-        border: 10px solid white;
-    }
-    .backimg{
-        
-        padding: 0em 0 0 0 ;
+        width: 150px;
         
     }
     .quote{
-        width: 50%;
-        
-        
+        position: relative;
+        left: 40px;
+    }
     
-    }
+    
 }
-@media screen and (max-width: 320px){
-    .loader{
-        position:absolute;
-        left: 1000px;
-        top: 125px;
-        width: 100px;
-        display: none;
-        border: 10px solid white;
+@media only screen and (max-width: 425px) {
+    #btn{
+        width: 150px;
+        padding: 0.2em;
+        
     }
-}
-@media screen and (max-width: 375px){
-    .loader{
-        position:absolute;
-        left: 160px;
-        top: 150px;
-        width: 100px;
-        display: none;
-        border: 10px solid white;
-    }
-}
-@media screen and (max-width: 768px){
-    .loader{
-        position:absolute;
-        left: 350px;
-        top: 150px;
-        width: 100px;
-        display: none;
-        border: 10px solid white;
+    .quote{
+        width: 40%;
+        font-size: 0.8em;
+        height: 200px;
+        position: relative;
+        left: 20px;
     }
     .backimg{
-       
-        background-size: 900px;
-        margin: 10px auto;
-        height: 500px;
-        width: 90%;
-        overflow: hidden;   
-        display: flex;
-        flex-direction: row-reverse;
-       
-        }
-        .btn{
-            width: 300px;
-        }
-        #btn{
-            font-size: 1em;
-            padding: .2em;
-            width: 130px;
-        }
-        p{
-            font-size: 1em;
-            color: rgb(0, 0, 0);
-            padding: 0.2em;
-        }
-        span{
-            color: rgb(0, 0, 0);
-            font-size: 1em;
-            font-weight: bolder;
-        }
-        .quote{
-            width: 30%;
-            
-            
-        
-        }
-}
-@media screen and (max-width: 1024px){
-    .loader{
-        position:absolute;
-        left: 500px;
-        top: 150px;
-        width: 100px;
-        display: none;
-        border: 10px solid white;
+        padding: 4em 0.5em 0.5em 0.5em;
     }
-} */
+    
+    
+}
